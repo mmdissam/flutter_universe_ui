@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
     return Text(
       planets[index].name,
       style: TextStyle(
-        fontSize: 44,
+        fontSize: 32,
         color: const Color(0xff47455f),
         fontWeight: FontWeight.w900,
       ),
@@ -256,7 +256,7 @@ class _HomePageState extends State<HomePage> {
     return Align(
       alignment: Alignment.bottomRight,
       child: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 130),
+        padding: const EdgeInsets.only(top: 20, left: 80),
         child: Text(
           planets[index].position.toString(),
           style: TextStyle(

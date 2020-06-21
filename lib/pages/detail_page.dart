@@ -39,9 +39,7 @@ class DetailPage extends StatelessWidget {
                 _namePlanet(context),
                 _nameOfSystem(context),
                 Divider(color: Colors.black38),
-                SizedBox(height: 20),
                 _infoOfPlanet(context),
-                SizedBox(height: 20),
                 Divider(color: Colors.black38),
               ],
             ),
@@ -81,18 +79,21 @@ class DetailPage extends StatelessWidget {
   }
 
   Widget _infoOfPlanet(BuildContext context) {
-    return Text(
-      // ?? means if no data return ''
-      planetInfo.description ?? '',
-      maxLines: 5,
-      overflow: TextOverflow.ellipsis,
-      style: TextStyle(
-        height: 1.5,
-        wordSpacing: 3,
-        fontFamily: 'Avenir',
-        fontSize: 20,
-        color: contentTextColor,
-        fontWeight: FontWeight.w500,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical:10 ),
+      child: Text(
+        // ?? means if no data return ''
+        planetInfo.description ?? '',
+        maxLines: 5,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(
+          height: 1.5,
+          wordSpacing: 3,
+          fontFamily: 'Avenir',
+          fontSize: 20,
+          color: contentTextColor,
+          fontWeight: FontWeight.w500,
+        ),
       ),
     );
   }
